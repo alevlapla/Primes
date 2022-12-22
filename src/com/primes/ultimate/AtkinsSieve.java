@@ -13,14 +13,14 @@ import org.slf4j.LoggerFactory;
  */
 public class AtkinsSieve {
 	private static final Logger logger = LoggerFactory.getLogger(AtkinsSieve.class);
-	
+
 	/**
 	 * Находит все простые числа, начиная с числа {@code 3} заканчивая числом
 	 * {@code limit}.
 	 * 
 	 * @param lmt число, до которого будут искаться простые числа.
 	 */
-	static void doAtkinsSieve(int limit) {
+	public static void doAtkinsSieve(int limit) {
 		if (limit < 0) {
 			logger.info("Отрицательное n не допускается.");
 			return;
@@ -28,6 +28,11 @@ public class AtkinsSieve {
 		if (limit <= 1) {
 			logger.info("Невозможно инициализировать решето (n должно быть больше 2).");
 			return;
+		}
+
+		/* Уменьшим чётное число до ближайшего нечётного числа. */
+		if ((limit & 1) == 0) {
+			limit--;
 		}
 
 		/* Подготовка решета. */
@@ -39,6 +44,9 @@ public class AtkinsSieve {
 
 		int sqr_lim = (int) Math.sqrt(limit) + 1;
 		/* Квадраты чисел: 1, 2^2 = 4, 3^2 = 9, 4^2 = 16... */
+
+		int[] c = new int[limit + 1];
+
 		for (int x = 1, x2 = 2 * x - 1; x <= sqr_lim; x++, x2 += 2 * x - 1) {
 			for (int y = 1, y2 = 2 * y - 1; y <= sqr_lim; y++, y2 += 2 * y - 1) {
 				/*
