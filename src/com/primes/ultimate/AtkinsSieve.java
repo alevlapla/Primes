@@ -42,13 +42,14 @@ public class AtkinsSieve {
 			isPrime[3] = true;
 		}
 
-		int sqr_lim = (int) Math.sqrt(limit) + 1;
+		/*
+		 * Квадратный корень от limit - до него будут итерации в циклах, в инвариантах
+		 * которых вычисляются квадраты при помощи операций умножения и сложения.
+		 */
 		/* Квадраты чисел: 1, 2^2 = 4, 3^2 = 9, 4^2 = 16... */
+		for (int x = 1, x2 = 2 * x - 1; x2 <= limit; x++, x2 += 2 * x - 1) {
+			for (int y = 1, y2 = 2 * y - 1; y2 <= limit; y++, y2 += 2 * y - 1) {
 
-		int[] c = new int[limit + 1];
-
-		for (int x = 1, x2 = 2 * x - 1; x <= sqr_lim; x++, x2 += 2 * x - 1) {
-			for (int y = 1, y2 = 2 * y - 1; y <= sqr_lim; y++, y2 += 2 * y - 1) {
 				/*
 				 * 1-ый случай: число-кандидат представимо как 12 * k + 1 или 12 * k + 5 и
 				 * уравнение 4 * x^2 + y^2 = n имеет нечётное количество решений.
@@ -80,7 +81,7 @@ public class AtkinsSieve {
 		 * Высеивание квадратов, начиная с 5^2 до sqr_lim (дальше нет смысла: sqr_lim^2
 		 * > limit).
 		 */
-		for (int i = 5; i <= sqr_lim; i++) {
+		for (int i = 5; i * i <= limit; i++) {
 			if (isPrime[i]) {
 				for (int j = i * i; j <= limit; j += i) {
 					isPrime[j] = false;
