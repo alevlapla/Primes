@@ -1,6 +1,6 @@
 # Primes
 ## Project Information
-Experiments with different basic and naive algorithms of prime numbers generation. 
+Experiments with different basic and naive algorithms of prime numbers generation. Links to articles describing algorithms can be found inside of each file (Wikipedia, Habr, Stackoverflow).
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/alevlapla/Primes) ![GitHub last commit](https://img.shields.io/github/last-commit/alevlapla/Primes)
 
