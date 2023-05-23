@@ -1,13 +1,9 @@
 # Primes
-## Project Information
-Experiments with different basic and naive algorithms of prime numbers generation. Links to articles describing algorithms can be found inside of each file (Wikipedia, Habr, Stackoverflow).
-
-![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/alevlapla/Primes) ![GitHub last commit](https://img.shields.io/github/last-commit/alevlapla/Primes)
+## Project Information ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/alevlapla/Primes) ![GitHub last commit](https://img.shields.io/github/last-commit/alevlapla/Primes)
+Experiments with different basic and naive algorithms of prime numbers generation. Elaboration on different prime number generators - [check this repository](https://github.com/alevlapla/PrimesGenerator).
 
 ## Description of algorithms
-### com.primes.main
-
-![GitHub repo file count](https://img.shields.io/github/directory-file-count/alevlapla/Primes/src/com/primes/main)
+### com.primes.main ![GitHub repo file count](https://img.shields.io/github/directory-file-count/alevlapla/Primes/src/com/primes/main)
 
 |*.java|Description|
 |:----:|:---------:|
@@ -24,11 +20,14 @@ Experiments with different basic and naive algorithms of prime numbers generatio
 |Seventh2.java|Sieve of Eratosthenes: discarded numbers are larger than the current squared candidate|
 |LinearEratosphen.java|Sieve of Eratosthenes: linear complexity|
 |LinearEratosphen2.java|Sieve of Eratosthenes: linear complexity with small optimization|
-### com.primes.ultimate
 
-![GitHub repo file count](https://img.shields.io/github/directory-file-count/alevlapla/Primes/src/com/primes/ultimate)
+### com.primes.ultimate ![GitHub repo file count](https://img.shields.io/github/directory-file-count/alevlapla/Primes/src/com/primes/ultimate)
 
 |*.java|Description|
 |:----:|:---------:|
 |AtkinsSieve.java|Atkin's sieve|
 |AtkinsBitSieve.java|Atkin's bit sieve based on the primitive type byte|
+
+## Theory sources
+1. [Алгоритм нахождения простых чисел](https://habr.com/ru/articles/122538/), Виталий @simplecode
+2. [Ещё раз о поиске простых чисел](https://habr.com/ru/articles/133037/), @Bodigrim 
