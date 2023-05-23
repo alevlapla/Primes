@@ -32,5 +32,3 @@ Experiments with different basic and naive algorithms of prime numbers generatio
 |:----:|:---------:|
 |AtkinsSieve.java|Atkin's sieve|
 |AtkinsBitSieve.java|Atkin's bit sieve based on the primitive type byte|
-
-![GitHub repo file count](https://img.shields.io/github/directory-file-count/alevlapla/Primes)
